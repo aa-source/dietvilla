@@ -1,0 +1,297 @@
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flexcenter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav{
+    height: 100vh;
+}
+.logo img{
+    height: 8.1rem;
+    filter: invert(100%);
+}
+.nav_items ul{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_items ul li{
+    list-style-type: none;
+    margin-right:32px ;
+}
+#navbar::before{
+    content: '';
+    position: absolute;
+
+    background: url(/images/navbar.jpeg)no-repeat center center/cover rgba(0, 0, 0.1);
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    height: 100vh;
+    filter: brightness(50%);
+    width: 100%;
+    /* opacity: 0.7; */
+}
+.nav_items ul li .active{
+    color: #fff;
+}
+.nav_items ul li a{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 70px;
+    color: rgb(205, 205, 205);
+    text-decoration: none;
+    transition: 1s;  
+}
+.nav_items ul li a:hover{
+    color: white;
+}
+#shop{
+    height: 100vh;
+}
+#contact{
+    height: 40vh;
+}
+.contact_icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact_icons img{
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+}
+#samples{
+    height: 150vh;
+}
+.samples{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.samples img{
+    height: 70vh;
+    width: 30vw;
+border-radius: 10px;
+}
+#footer{
+    height: 40vh;
+}
+#about_us{
+    height: 40vh;
+}
+#contact_nav::before{
+    content: '';
+    position: absolute;
+
+    background: url(/images/contact\ background.webp)no-repeat center center/cover rgba(0, 0, 0.1);
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    height:60vh;
+    width: 100%;
+}
+#contact_page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact_page_content{
+    width: 35%;
+}
+.contact_page_form{
+    width: 60%;
+ 
+}
+#contact_page{
+    background-color: rgba(232, 232, 232, 0.604);
+    padding: 21px 30px;
+
+}
+.contact_page_img img{
+    height: 21px;
+    width: 21px;
+}
+.contact_page_img{
+    display: flex;
+    justify-content: center;
+ 
+    flex-direction: column;
+}
+form label input , select , textarea{
+    display: block;
+    width: 90%; 
+    padding: 10px 0px;
+}
+form label{
+    margin-top: 30px;
+}
+#samples_nav::before{
+    content: '';
+    position: absolute;
+    filter: brightness(30%);
+    background: url(/images/samples.jpeg)no-repeat center center/cover rgba(0, 0, 0.1);
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    height:60vh;
+    width: 100%;
+}
+#about_us{
+    height: inherit;
+}
+.observer{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+.observe{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(100%);
+}
+.show{
+opacity: 1;
+filter: blur(0px);
+transform: translateX(0%);
+}
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateY(100%);
+}
+.lift{
+    opacity: 1;
+filter: blur(0px);
+transform: translateY(0%);
+}
+.nav_items ul:nth-child(1){
+    transition-delay:200ms ;
+}
+.nav_items ul:nth-child(2){
+    transition-delay:400ms ;
+}
+.nav_items ul:nth-child(3){
+    transition-delay:600ms ;
+}
+#Order_nav::before{
+    content: '';
+    position: absolute;
+    background: url(public/images/order\ now.jpeg)no-repeat center center/cover rgba(0, 0, 0.1);
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    height:60vh;
+    width: 100%;
+    filter: brightness(30%);
+}
+#bars , #cross{
+    display: none;
+}
+@media screen and (max-width:700px) {
+   .nav_items #nav_list{
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+   background-color:rgb(0, 0, 0) ;
+    padding: 10px;
+    position: absolute;
+    right: -200px;
+    width: 50%;
+    z-index: 3;
+    top: 0px;
+    transition: 1s ease-in-out;
+    display:none ;
+   }
+   .nav_items ul button{
+  font-size: 14px;
+   }
+   #bars{
+    display: inline;
+    height: 35px;
+    cursor: pointer;
+    position: relative;
+    top: 5%;
+    filter: invert(100%);
+    margin: 23px;
+}
+.logo img{
+    height: 55px;
+    margin: 23px;
+    filter: brightness(10000%);
+  
+  
+}
+#cross{
+position: absolute;
+top: 10px;
+right: 10px;
+    height: 15px;
+    filter: invert(100%);
+    cursor: pointer;
+    z-index: 4; 
+    transition: 1s;
+}
+.h2{
+    font-size: 11px;
+}
+#navbar::before{
+  transition: 1s;
+}
+#shop{
+
+}
+#shop .iframe{
+width: 100%;
+}
+#contact{
+   
+}
+#samples{
+ 
+    height: inherit;
+}
+.samples{
+    flex-wrap: wrap;
+}
+.samples img{
+    width: 100%;
+}
+#footer{
+    margin-top: 30px;
+}
+#about_us{
+    height: inherit;
+}
+#contact_page{
+    display: block;
+}
+.contact_page_form{
+    width: 100%;
+    margin: auto;
+}
+.contact_page_form label{
+    margin-top: 5px;
+}
+.contact_page_content{
+    width: 100%;
+    margin-top: 30px;
+}
+.contact_page_form select{
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+}
